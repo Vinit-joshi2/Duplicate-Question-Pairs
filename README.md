@@ -198,3 +198,32 @@ cv.get_feature_names_out()
 
   - Random Forest Accuracy (79.1%) and XGBoost Accuracy (79.65%) are very close, both benefiting from advanced Bagging which improves stability and reduces overfitting by training multiple models on different data subsets.
   - Decision Tree accuracy (72.07%) remains lower since it is a single model, more make overfitting problem without ensemble benefits.
+
+<p>Confusion Matrix</p>
+
+<h4>Random Forest</h4>
+
+<img src = "img17">
+
+  - True Negatives (3244): These are the cases where the model correctly predicted questions as not duplicates.
+  
+  - False Positives (551): The model incorrectly predicted unique questions as duplicates (Type I error).
+  
+  - False Negatives (734): The model missed duplicate questions and predicted them as unique (Type II error).
+  
+  - True Positives (1471): The model correctly identified actual duplicates.
+
+<h4>XGBoost</h4>
+
+<img src = "img18">
+
+- True Negatives (TN): 3177 — Model correctly identified non-duplicate pairs.
+
+- False Positives (FP): 618 — Model incorrectly Identify unique questions as duplicates (Type I error).
+
+- False Negatives (FN): 603 — Model missed some duplicate pairs, marking them as unique (Type II error). We likely more to be focus on FN beacause if questions are duplicate but my model label that questions as Non-duplicate then it would be cost for me
+
+- True Positives (TP): 1602 — Model correctly predicted duplicate question pairs.
+
+- As compare to our previous Random forest model XGBoost lower FN means it detects duplicates more reliably than Random Forest in our case.
+
