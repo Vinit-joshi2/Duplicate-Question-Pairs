@@ -37,8 +37,51 @@
       
    ```
        import opendatasets as od
-       url = "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data"
+       url = "https://www.kaggle.com/c/quora-question-pairs/data
        od.download(url)
    ```
+
+## Exploratory Data Analysis
+
+<p>
+  Duplicate questions data
+</p>
+
+<img src =  "img1">
+
+<p>
+  Null value in datset
+</p>
+
+<img src =  "img2">
+
+<p>
+  Distribution of Duplicate and Non-duplicate questions
+</p>
+
+<img src =  "img3">
+
+<img src =  "img5">
+
+<p>
+  Percentage Distribution of Duplicate and Non-duplicate questions
+</p>
+
+<img src =  "img4">
+
+<p>
+  repeated question
+</p>
+
+<img src =  "img6">
+
+<img src =  "img7">
+
+  - As per our histogram unique question are in our datset are 10^5 ~ 5 lakhs
+  - There is one question in our dataseyt which is repeated 120 times
+  - If we carryfully look at graph,Seems like there is one question which is almost repeated ~156 times
+  - Most of the question in our datset are repeated approx 20 or 60 times
+
+
 
   
