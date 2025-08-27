@@ -4,3 +4,41 @@
 </p>
 
 # Our Goal
+- To predict which of the provided pairs of questions contain two questions with the same meaning
+- Applying TF-Idf Teachnique
+- Applying BOW Technique
+- Advance Feature Engeneering
+
+## Requirements
+
+- **Python Libraries**:
+  - `pandas`, `numpy`, `matplotlib`, `seaborn` , `sklearn`
+- **Kaggle API Key** (for data downloading)
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   ```
+2. Install Python libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up your Kaggle API, download the data  and follow the steps to load
+   
+    - Run this command on any code editor
+     ```
+     !pip install opendatasets
+   ```
+
+   
+    - Once you install library then run below command  for loading data into your editor for that you need to pass your kaggle credentials
+      
+   ```
+       import opendatasets as od
+       url = "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data"
+       od.download(url)
+   ```
+
+  
