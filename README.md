@@ -82,6 +82,107 @@
   - If we carryfully look at graph,Seems like there is one question which is almost repeated ~156 times
   - Most of the question in our datset are repeated approx 20 or 60 times
 
+## TF-IDF
 
+```
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf = TfidfVectorizer(
+    analyzer = "word" ,
+    stop_words = ("english") ,
+    ngram_range = (2,2) ,
+    max_features = 3000,
+    binary = True
+
+)
+
+q1_arr  , q2_arr = np.vsplit(tfidf.fit_transform(question).toarray() , 2)
+```
+
+```
+print(tfidf.get_feature_names_out())
+print(tfidf.idf_)
+```
+
+<img src = "img8">
+
+<p>
+  Now let's train Random Forest , XGBoost and Decision Tree model
+</p>
+
+<img src = "img9">
+
+  - XGBoost achieved the highest accuracy (0.7965), slightly outperforming Random Forest (0.7935), which shows both ensemble methods are effective with TF-IDF features.
+  - Decision Tree had the lowest accuracy (71.82%) as a single tree tends to be less robust and more make overfitting or underfitting problem.
+
+
+## Bag-of-words
+
+<img src = "img10">
+
+```
+from sklearn.feature_extraction.text import CountVectorizer
+# merge texts
+questions = list(ques_df["question1"]) + list(ques_df["question2"])
+
+cv = CountVectorizer(max_features=3000)
+q1_arr  , q2_arr = np.vsplit(cv.fit_transform(questions).toarray() , 2)
+
+# 3000 featurename
+cv.get_feature_names_out()
+
+```
+
+<img src = "img11">
+
+
+## BOW - Basic features / Feature Engneering
+
+<img src = "img12">
+
+<p>
+  Now this are all the new feature we will create from our existing columns
+</p>
+
+<p>
+  Let's see the distribution of target column
+</p>
+
+<img src = "img13">
+
+  - 63.376667 % data in our dataset is Non-duplicate questions data
+  - 36.623333 % data in our dataset is duplicate questions data
+
+<img src = "img14">
+<p>
+  This all our new feature we created from existing columns
+</p>
 
   
+## BOW - BOW Preprocessing and advanced features
+
+<p>
+  Let's add few more new feature
+</p>
+
+<p>
+1. Token Features
+  - cwc_min: This is the ratio of the number of common words to the length of the smaller question
+  - cwc_max: This is the ratio of the number of common words to the length of the larger question
+  - csc_min: This is the ratio of the number of common stop words to the smaller stop word count among the two questions
+  - csc_max: This is the ratio of the number of common stop words to the larger stop word count among the two questions
+  - ctc_min: This is the ratio of the number of common tokens to the smaller token count among the two questions
+  - ctc_max: This is the ratio of the number of common tokens to the larger token count among the two questions
+  - last_word_eq: 1 if the last word in the two questions is same, 0 otherwise
+  - first_word_eq: 1 if the first word in the two questions is same, 0 otherwise
+  
+2. Length Based Features
+  - mean_len: Mean of the length of the two questions (number of words)
+  - abs_len_diff: Absolute difference between the length of the two questions (number of words)
+  - longest_substr_ratio: Ratio of the length of the longest substring among the two questions to the length of the smaller question
+
+3. Fuzzy Features
+  - fuzz_ratio: fuzz_ratio score from fuzzywuzzy
+  - fuzz_partial_ratio: fuzz_partial_ratio from fuzzywuzzy token_sort_ratio: token_sort_ratio from fuzzywuzzy
+  - token_set_ratio: token_set_ratio from fuzzywuzzy
+</p>
+
