@@ -165,7 +165,9 @@ cv.get_feature_names_out()
 </p>
 
 <p>
+  
 1. Token Features
+  
   - cwc_min: This is the ratio of the number of common words to the length of the smaller question
   - cwc_max: This is the ratio of the number of common words to the length of the larger question
   - csc_min: This is the ratio of the number of common stop words to the smaller stop word count among the two questions
@@ -184,5 +186,6 @@ cv.get_feature_names_out()
   - fuzz_ratio: fuzz_ratio score from fuzzywuzzy
   - fuzz_partial_ratio: fuzz_partial_ratio from fuzzywuzzy token_sort_ratio: token_sort_ratio from fuzzywuzzy
   - token_set_ratio: token_set_ratio from fuzzywuzzy
+  - 
 </p>
 
