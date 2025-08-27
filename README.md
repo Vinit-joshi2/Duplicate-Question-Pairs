@@ -189,3 +189,12 @@ cv.get_feature_names_out()
    
   </p>
 
+
+<img src = "img15">
+
+<p> Let's trained Random Forest , XGBoost , Decision Tree and see the accuracy of each model</p>
+
+<img src = "img16">
+
+  - Random Forest Accuracy (79.1%) and XGBoost Accuracy (79.65%) are very close, both benefiting from advanced Bagging which improves stability and reduces overfitting by training multiple models on different data subsets.
+  - Decision Tree accuracy (72.07%) remains lower since it is a single model, more make overfitting problem without ensemble benefits.
