@@ -227,3 +227,9 @@ cv.get_feature_names_out()
 
 - As compare to our previous Random forest model XGBoost lower FN means it detects duplicates more reliably than Random Forest in our case.
 
+
+## Test the model
+
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img19.png">
+
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img20.png">
