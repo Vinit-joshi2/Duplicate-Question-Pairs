@@ -47,35 +47,35 @@
   Duplicate questions data
 </p>
 
-<img src =  "img1">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img1.png">
 
 <p>
   Null value in datset
 </p>
 
-<img src =  "img2">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img2.png">
 
 <p>
   Distribution of Duplicate and Non-duplicate questions
 </p>
 
-<img src =  "img3">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img3.png">
 
-<img src =  "img5">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img4.png">
 
 <p>
   Percentage Distribution of Duplicate and Non-duplicate questions
 </p>
 
-<img src =  "img4">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img5.png">
 
 <p>
   repeated question
 </p>
 
-<img src =  "img6">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img6.png">
 
-<img src =  "img7">
+<img src =  "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img7.png">
 
   - As per our histogram unique question are in our datset are 10^5 ~ 5 lakhs
   - There is one question in our dataseyt which is repeated 120 times
@@ -103,13 +103,13 @@ print(tfidf.get_feature_names_out())
 print(tfidf.idf_)
 ```
 
-<img src = "img8">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img8.png">
 
 <p>
   Now let's train Random Forest , XGBoost and Decision Tree model
 </p>
 
-<img src = "img9">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img9.png">
 
   - XGBoost achieved the highest accuracy (0.7965), slightly outperforming Random Forest (0.7935), which shows both ensemble methods are effective with TF-IDF features.
   - Decision Tree had the lowest accuracy (71.82%) as a single tree tends to be less robust and more make overfitting or underfitting problem.
@@ -117,7 +117,7 @@ print(tfidf.idf_)
 
 ## Bag-of-words
 
-<img src = "img10">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img10.png">
 
 ```
 from sklearn.feature_extraction.text import CountVectorizer
@@ -132,12 +132,12 @@ cv.get_feature_names_out()
 
 ```
 
-<img src = "img11">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img11.png">
 
 
 ## BOW - Basic features / Feature Engneering
 
-<img src = "img12">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img12.png">
 
 <p>
   Now this are all the new feature we will create from our existing columns
@@ -147,12 +147,12 @@ cv.get_feature_names_out()
   Let's see the distribution of target column
 </p>
 
-<img src = "img13">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img13.png">
 
   - 63.376667 % data in our dataset is Non-duplicate questions data
   - 36.623333 % data in our dataset is duplicate questions data
 
-<img src = "img14">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img14.png">
 <p>
   This all our new feature we created from existing columns
 </p>
@@ -190,11 +190,11 @@ cv.get_feature_names_out()
   </p>
 
 
-<img src = "img15">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img15.png">
 
 <p> Let's trained Random Forest , XGBoost , Decision Tree and see the accuracy of each model</p>
 
-<img src = "img16">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img16.png">
 
   - Random Forest Accuracy (79.1%) and XGBoost Accuracy (79.65%) are very close, both benefiting from advanced Bagging which improves stability and reduces overfitting by training multiple models on different data subsets.
   - Decision Tree accuracy (72.07%) remains lower since it is a single model, more make overfitting problem without ensemble benefits.
@@ -203,7 +203,7 @@ cv.get_feature_names_out()
 
 <h4>Random Forest</h4>
 
-<img src = "img17">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img17.png">
 
   - True Negatives (3244): These are the cases where the model correctly predicted questions as not duplicates.
   
@@ -215,7 +215,7 @@ cv.get_feature_names_out()
 
 <h4>XGBoost</h4>
 
-<img src = "img18">
+<img src = "https://github.com/Vinit-joshi2/Duplicate-Question-Pairs/blob/main/Images/img18.png">
 
 - True Negatives (TN): 3177 — Model correctly identified non-duplicate pairs.
 
