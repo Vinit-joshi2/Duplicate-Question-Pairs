@@ -1,0 +1,9 @@
+pandas 
+numpy
+matplotlib
+seaborn
+sklearn
+fuzzywuzzy
+distance
+nltk
+bs4
