@@ -40,6 +40,12 @@
        url = "https://www.kaggle.com/c/quora-question-pairs/data
        od.download(url)
    ```
+<p>
+  If you made  it till noe, It seem you are really intrested in the case study!.Then do checkout my blog where I have explained every step of 
+  my approach for solving this case stydu
+</p>
+<a href = "https://medium.com/@joshivinit20/duplicate-questions-pair-bdafff3abc4e">Duplicate Question Pair - Case Study</a>
+
 
 ## Exploratory Data Analysis
 
